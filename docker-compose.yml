@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    container_name: deno-servest-example
+    build:
+      context: ./server
+    image: deno-servest-example
+    ports:
+      - "8080:8080"
+    command: --allow-net app.tsx
